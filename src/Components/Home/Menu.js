@@ -17,20 +17,34 @@ import { Ionicons } from 'react-native-vector-icons';
 
 const Tab = createBottomTabNavigator()
 
-
-
-function Menu(props){
+function Menu(){
     //#53555B
     return (
-        <Tab.Navigator initialRouteName="Map" screenOptions={{ headerShown: false }}>
+        <Tab.Navigator 
+            initialRouteName="Map" 
+            screenOptions={{ 
+                headerShown: false, 
+                activeTintColor: "blue",
+                tabBarActiveTintColor: "#4C4F52",
+                tabBarInactiveTintColor: "#878F96",
+                tabBarStyle: {
+                    backgroundColor: '#DEE2E6',
+                    height: 70,
+                    paddingBottom: 20,
+                    paddingTop: 5
+                },
+                
+            }}
+
+        >
             <Tab.Screen
             name="Map"
             component={Map}
             options={{
                 title: '지도',
-                tabBarIcon: ({color, size}) => (
-                <Ionicons name="map" color={color} size={size} />
-                ),
+                tabBarIcon: ({color, size}) => {
+                    return (<Ionicons name="map" color={color} size={size} />)
+                },
             }}
             />
             <Tab.Screen
@@ -38,9 +52,9 @@ function Menu(props){
             component={Search}
             options={{
                 title: '탐색',
-                tabBarIcon: ({color, size}) => (
-                <Ionicons name="compass" color={color} size={size} />
-                ),
+                tabBarIcon: ({color, size}) => {
+                    return (<Ionicons name="compass" color={color} size={size} />)
+                },
             }}
             />
             <Tab.Screen
@@ -48,9 +62,9 @@ function Menu(props){
             component={Avatar}
             options={{
                 title: '아바타',
-                tabBarIcon: ({color, size}) => (
-                <Ionicons name="person" color={color} size={size} />
-                ),
+                tabBarIcon: ({color, size}) => {
+                    return (<Ionicons name="person" color={color} size={size} />)
+                },
             }}
             />
             <Tab.Screen
@@ -58,9 +72,9 @@ function Menu(props){
             component={Footprint}
             options={{
                 title: '발자국',
-                tabBarIcon: ({color, size}) => (
-                <Ionicons name="paw" color={color} size={size} />
-                ),
+                tabBarIcon: ({color, size}) => {
+                    return (<Ionicons name="paw" color={color} size={size} />)
+                },
             }}
             />
             <Tab.Screen
@@ -68,9 +82,9 @@ function Menu(props){
             component={My}
             options={{
                 title: '기록',
-                tabBarIcon: ({color, size}) => (
-                <Ionicons name="book" color={color} size={size} />
-                ),
+                tabBarIcon: ({color, size}) => {
+                    return (<Ionicons name="book" color={color} size={size} />)
+                },
             }}
             />
         </Tab.Navigator>

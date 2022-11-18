@@ -41,18 +41,7 @@ function Login({navigation, route}) {
                         <Text style={styles.login}>로그인</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.btnCont}>
-                        <Image source={Google} style={styles.loginLogo} />
-                        <Text>구글로 로그인</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.btnCont}>
-                        <Image source={Facebook} style={styles.loginLogo} />
-                        <Text>페이스북으로 로그인</Text>
-                    </TouchableOpacity>
-                    <View style={styles.checkCont}>
-                        <Text>신규회원이신가요?</Text>
-                        <Text>회원가입하기</Text>
-                    </View>
+                   
                 </View>
                 ):(
                     <ActivityIndicator />
@@ -85,13 +74,13 @@ const styles = StyleSheet.create({
         fontFamily: 'Maple',
         backgroundColor: '#96C656',
         color: 'white',
-        width: 120,
+        width: 350,
         height: 40,
         fontSize: 16,
         borderRadius: 50,
         textAlign: 'center',
         lineHeight: 40,
-        marginTop: 60
+        marginTop: 70
     },
     btnCont: {
         alignItems: 'center',
